@@ -1,0 +1,7 @@
+{
+  "urlSocket" : "http://localhost:3000",
+  "redirectUri": "http://localhost:4200/room-admin",
+  "client_id": "f510c562c1da4459b8aef7eb37b9950f", 
+  "client_secret": "43f7c765cc444ac4be932dd2e55876f1",
+  "scope": "user-read-private user-read-email playlist-read-collaborative streaming"
+}

@@ -1,0 +1,15 @@
+<form class="form">
+    <mat-form-field class="form-field" appearance="fill">
+        <mat-label>Musique</mat-label>
+        <input type="text" placeholder="Choisir une musique" aria-label="Musique" matInput [formControl]="titreResearch"
+            [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of options" class="p-8 h-64" [value]="option.name" (click)="selectMusic(option)">
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <img [src]="option.album.images[2].url">
+                    <span class="title">{{option.name}}</span>
+                </div>
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+</form>

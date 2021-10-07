@@ -1,0 +1,27 @@
+.form-field {
+    background-color: white;
+    color: black;
+    height: 64px;   
+    font-size: 16px;
+    border-radius: 16px;
+    padding-left: 8px;
+    border:none;
+    margin: 16px;
+    caret-color: black;
+}
+
+.form, .form-field {
+    width: 90%;
+}
+
+mat-option {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+}
+
+.title {
+    margin-left: 16px;
+}

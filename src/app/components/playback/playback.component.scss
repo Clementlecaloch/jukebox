@@ -1,0 +1,37 @@
+:host {
+  color: white;
+  height: 100%;
+}
+
+.container {
+  padding: 16px;
+  width: 100%;
+  background-color: black;
+
+  .main-wrapper {
+    width: 100%;
+
+    .now-playing__cover {
+      height: 128px;
+      width: 128px;
+    }
+
+    .now-playing__side {
+      padding-left: 32px;
+
+      .now-playing__name {
+        font-size: 32px;
+      }
+
+      .now-playing__artist {
+        font-size: 24px;
+      }
+    }
+
+
+  }
+}
+.icon {
+  font-size: 48px;
+  padding-left: 32px;
+}

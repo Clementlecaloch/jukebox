@@ -1,0 +1,18 @@
+<div class="card-playlist" fxLayout="row" fxLayoutAlign="start end" [style]="'background: ' + backgroundColor">
+
+    <mat-icon (click)="return()" class="icone">arrow_back_ios</mat-icon>
+
+    <!-- image  -->
+    <img *ngIf="playlistSelected.images[1]" [src]="playlistSelected.images[1].url" class="image">
+    <div *ngIf="!playlistSelected.images[1]" class="image no-image" fxLayout="row wrap" fxLayoutAlign="center center"> 
+        <mat-icon class="icone-image"> music_note</mat-icon>
+    </div>
+
+    <!-- Infos -->
+    <div class="infos">
+        <span>Playlist</span>
+        <h1 class="card-playlist-title">{{playlistSelected.name}}</h1>
+        <span class="card-playlist-subtitle">{{playlistSelected.owner.display_name}} - {{playlistSelected.tracks.total}} titres</span>
+    </div>
+
+</div>

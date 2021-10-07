@@ -1,0 +1,63 @@
+<div style="margin-bottom: 24px;">
+    
+    <div fxLayout="row" fxLayoutAlign="start center" class="track-info w-100-p">
+        <p fxFlex="5%" class="pr-24">#</p>
+        
+        <div fxFlex="auto">
+            <span>TITRE</span>
+        </div>
+        
+        
+        <span fxFlex="30%" class="hidden">
+            ALBUM
+        </span>
+        
+        <span fxFlex="10%" class="hidden">
+            DURÉE
+        </span>
+
+        <span *ngIf="admin" fxFlex="5%">
+            Retirer
+        </span>
+    </div>
+    
+    <mat-divider></mat-divider>
+    
+    <div *ngFor="let tracks of playlistSelected; let index = index" fxLayout="column">
+        
+        <div fxLayout="row" fxLayoutAlign="start center" class="track-info">
+            
+            <p fxFlex="5%" class="pr-24">{{index + 1}}</p>
+            
+            <div fxLayoutAlign="start center" fxLayout="row" fxFlex="auto">
+                <img class="small-img-album" *ngIf="tracks.track.album.images" [src]="tracks.track.album.images[0].url">
+                
+                <div fxLayoutAlign="start start" fxLayout="column" class="track-text">
+                    <span>{{tracks.track.name}}</span>
+                    
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                        <mat-icon *ngIf="tracks.track.explicit" style="padding-right: 4px;"> explicit</mat-icon>
+                        
+                        <div>
+                            <span> {{tracks.track.artists[0].name}}</span>
+                            <span *ngIf="tracks.track.artists.length > 1" style="padding-left: 4px;">,...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <span fxFlex="30%" class="hidden">
+                {{tracks.track.album.name}}
+            </span>
+            
+            <span fxFlex="10%" class="hidden">
+                {{tracks.track.duration_ms | date: "mm:ss"}}
+            </span>
+
+            <mat-icon *ngIf="admin" fxFlex="5%" (click)="remove(index)">close</mat-icon>
+            
+        </div>
+        <mat-divider></mat-divider>
+    </div>
+</div>

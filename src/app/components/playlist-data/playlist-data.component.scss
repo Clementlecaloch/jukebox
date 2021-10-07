@@ -1,0 +1,41 @@
+.card-playlist {
+    padding: 16px;
+    position: relative;
+}
+
+.infos {
+    padding: 16px
+}
+
+.image {
+    height:200px;
+    width: 200px;
+}
+
+.no-image {
+    background-color: #333;
+}
+
+.icone-image {
+    height:96px;
+    width: 96px;
+    font-size: 96px;
+}
+
+.icone {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    font-size: 32px;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+}
+
+mat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}

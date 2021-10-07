@@ -1,0 +1,18 @@
+<div class="container w-100-p" *ngIf="currentPlayedSong">
+    <div class="main-wrapper w-100-p" fxLayout="row" fxLayoutAlign="start center" >
+        <img [src]="currentPlayedSong.album?.images[1].url"
+             class="now-playing__cover" alt="" />
+
+        <div class="now-playing__side">
+            <div class="now-playing__name">
+                {{currentPlayedSong.name}}</div>
+
+            <div class="now-playing__artist">{{currentPlayedSong.artists[0].name}}</div>
+        </div>
+
+        <div class="icon">
+            <mat-icon [inline]="true" (click)="togglePlay()">{{playing ? 'pause' : 'play_arrow'}}</mat-icon>
+            <mat-icon [inline]="true"(click)="next()">skip_next</mat-icon>
+        </div>
+    </div>
+</div>

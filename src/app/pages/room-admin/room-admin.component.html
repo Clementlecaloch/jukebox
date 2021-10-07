@@ -1,0 +1,31 @@
+<div class="full-page">
+
+    <div *ngIf="playlists && !playlistSelected" fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
+        <div *ngFor="let playlist of playlists.items" fxLayout="column" fxLayoutAlign="space-around center"
+            class="card-playlist" fxFlex="20%" (click)="openPlaylist(playlist)" (mouseenter)="isHovered = true" (mouseleave)="isHovered = false">
+            <img *ngIf="playlist.images[1]" [src]="playlist.images[1].url" class="image">
+            <div *ngIf="!playlist.images[1]" class="image no-image" fxLayout="row wrap" fxLayoutAlign="center center">
+                <mat-icon class="icone"> music_note
+                </mat-icon>
+            </div>
+            <span class="card-playlist-title">{{playlist.name}}</span>
+            <span class="card-playlist-subtitle">Nombre de musiques : <b
+                    style="color: white;">{{playlist.tracks.total}}</b> </span>
+            <!-- <app-bouton-play *ngIf="isHovered" @openClose class="bouton"></app-bouton-play> -->
+        </div>
+    </div>
+
+    <div *ngIf="playlistSelected" 
+class="playlistContainer">
+        <app-search-input></app-search-input>
+
+        <app-playlist-data (unselectPlaylist)="playlistSelected = false"[playlistSelected]="playlistSelected"></app-playlist-data>
+
+        <div class="playlist">
+            <app-file-attente  [playlistSelected]="musiqueOfPlaylist.items"></app-file-attente>
+        </div>
+
+        <app-playback class="player"></app-playback>
+
+    </div>
+</div>

@@ -1,5 +1,5 @@
 {
-  "urlSocket" : "http://localhost:3000",
+  "urlSocket" : "http://89.82.165.125:5252",
   "redirectUri": "https://jukebox-dun.vercel.app/room-admin",
   "client_id": "f510c562c1da4459b8aef7eb37b9950f", 
   "client_secret": "43f7c765cc444ac4be932dd2e55876f1",

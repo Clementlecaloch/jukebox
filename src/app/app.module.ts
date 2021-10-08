@@ -26,7 +26,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { PlaybackComponent } from './components/playback/playback.component';
 
 
-const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
+const config: SocketIoConfig = { url: 'http://89.82.165.125:5252', options: {} };
 
 const routes: Routes = [
   {

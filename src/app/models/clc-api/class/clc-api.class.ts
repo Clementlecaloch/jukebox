@@ -11,7 +11,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
     })
   };
   
-  const URL : string = "http://localhost:3000/"
+  const URL : string = "http://89.82.165.125:5252"
   
   export class ClcApi {
   

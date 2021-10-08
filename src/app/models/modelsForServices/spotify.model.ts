@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 
-const URL: string = "http://89.82.165.125:5252"
+const URL: string = "https://89.82.165.125:5252"
 
 export class SpotifyClass {
 
